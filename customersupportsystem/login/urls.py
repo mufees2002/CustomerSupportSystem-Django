@@ -9,4 +9,5 @@ urlpatterns=[
     path('list/',views.get_user),
     path('login/',views.login),
     path('AddEmployee/ ',views.AddEmployee)
+
 ]

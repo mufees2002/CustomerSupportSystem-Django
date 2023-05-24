@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'login',
-    'stockandpurchase'
+    'stockandpurchase.apps.StockandpurchaseConfig',
+     'dashboards'
+
 
 
 
