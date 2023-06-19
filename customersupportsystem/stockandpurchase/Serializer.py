@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from .models import Items,Stock,Purchase
+from .models import Items,Stock,Purchase,Details
 
 
 class ItemSerializer(ModelSerializer):
@@ -45,3 +45,11 @@ class PurchaseSerailizer(ModelSerializer):
     def get_value(self, dictionary):
         if "name" in dictionary:
             return dictionary
+
+
+
+    class DetailSerilizes(ModelSerializer):
+        item=ItemSerializer()
+
+        def create(self, validated_data):
+            item_data=validated_data.pop('items')

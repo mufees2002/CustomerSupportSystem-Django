@@ -28,3 +28,13 @@ class Purchase(models.Model):
         on_delete=models.CASCADE)
     count=models.IntegerField(default=0)
     status=models.CharField(max_length=32,default="SOLD")
+
+
+class Details(models.Model):
+    items = models.ForeignKey(
+        Items,
+        related_name="ditems",
+        on_delete=models.CASCADE)
+    descripiton=models.CharField(max_length=200)
+    rating=models.IntegerField(default=0)
+
